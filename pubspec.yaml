@@ -7,6 +7,10 @@ environment:
   sdk: '>=3.4.3 <4.0.0'
 
 dependencies:
+  geolocator: ^13.0.1
+  url_launcher: ^6.3.1
+  convex_bottom_bar: ^3.2.0
+  ultralytics_yolo: ^0.0.3
   shared_preferences: ^2.2.3
   get: ^4.6.6
   flutter:

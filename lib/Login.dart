@@ -1,6 +1,9 @@
 import 'package:client_001/SignUp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'Home.dart';
 
 class Login extends StatefulWidget{
   @override
@@ -103,7 +106,10 @@ class _LoginState extends State<Login>{
               bool? delete = await showLoginConfirmDialog1();
               if (delete == null) {
               } else {
-                //todo
+                SharedPreferences sp = await SharedPreferences.getInstance();
+                sp.setString('usrId', _usrId);
+                sp.setString('password', _password);
+                Get.to(Home());
               }
             }
           },
